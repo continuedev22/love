@@ -38,6 +38,27 @@
             margin-top: 20px;
             width: 150px;
         }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #ff6699;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -47,14 +68,24 @@
     <br>
     <img id="chibi-img" src="love.jpg" alt="Chibi dễ thương">
     
+    <div id="popup" class="popup">
+        <p>Yah bảo bối của Tùng ❤️</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
     <script>
         let clickCount = 0;
         const yesBtn = document.getElementById("yes");
         const noBtn = document.getElementById("no");
+        const popup = document.getElementById("popup");
 
         yesBtn.addEventListener("click", function() {
-            alert("yah bảo bối của Tùng");
+            popup.style.display = "block";
         });
+
+        function closePopup() {
+            popup.style.display = "none";
+        }
 
         noBtn.addEventListener("click", function() {
             clickCount++;
