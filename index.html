@@ -135,7 +135,7 @@
 <div id="result"></div>
 
 <script>
-  const DATA_FILE = "cic.txt";
+  const DATA_FILE = "CIC.txt";
   let allGrouped = {};
 
   window.onload = async function () {
@@ -259,12 +259,17 @@
           // Sort ngày giảm dần
           filteredRows.sort((a, b) => parseDate(b.Ngay) - parseDate(a.Ngay));
 
+          // Tổng theo filter
+          let tongFilter = 0;
+          filteredRows.forEach(r => { tongFilter += Number(r.SoTien) || 0; });
+
           let html =
             '<table class="inner-table">' +
             '<caption>' + tenNguoi + '</caption>' +
             '<thead><tr><th>STT</th><th>Ngày</th><th>Nội dung</th><th>Số tiền</th><th>Ghi chú</th></tr></thead>' +
             '<tbody>' +
-            '<tr class="total-row"><td colspan="3">Tổng (tất cả)</td><td>' + tongCong.toLocaleString() + '</td><td></td></tr>';
+            '<tr class="total-row"><td colspan="3">Tổng (tất cả)</td><td>' + tongCong.toLocaleString() + '</td><td></td></tr>'
+            + '<tr class="total-row" style="color:#1a6fbf;"><td colspan="3">Tổng (đang lọc)</td><td>' + tongFilter.toLocaleString() + '</td><td></td></tr>';
 
           if (filteredRows.length === 0) {
             html += '<tr><td colspan="5" style="text-align:center;color:#999;font-style:italic;">Không có dữ liệu trong khoảng thời gian</td></tr>';
