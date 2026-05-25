@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>CIC</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .grid-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .grid-table td {
+      vertical-align: top;
+      padding: 10px;
+      width: 25%;
+    }
+
+    .inner-table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 320px;
+      font-size: 13px;
+    }
+
+    .inner-table th,
+    .inner-table td {
+      border: 1px solid #ccc;
+      padding: 5px 8px;
+    }
+
+    .inner-table th {
+      background: #f0f0f0;
+    }
+
+    caption {
+      text-align: left;
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .total-row td {
+      font-weight: bold;
+      background: #fafafa;
+    }
+
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      background: #f5f5f5;
+      padding: 12px 16px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .filter-bar label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .filter-bar input[type="date"] {
+      padding: 5px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    .filter-bar button {
+      padding: 5px 14px;
+      background: #3a7bd5;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .filter-bar button:hover {
+      background: #2c5fb3;
+    }
+
+    .filter-bar button.reset {
+      background: #888;
+    }
+
+    .filter-bar button.reset:hover {
+      background: #666;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+
+      .grid-table td {
+        page-break-inside: avoid;
+      }
+
+      .filter-bar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>== CIC ==</h2>
+<h5>(-): Bin thiếu</h5>
+<h5>(+): thiếu Bin</h5>
+
+<div class="filter-bar">
+  <label>Từ ngày:</label>
+  <input type="date" id="fromDate">
+  <label>Đến ngày:</label>
+  <input type="date" id="toDate">
+  <button onclick="applyFilter()">Lọc</button>
+  <button class="reset" onclick="resetFilter()">Đặt lại</button>
+</div>
+
+<div id="result"></div>
+
+<script>
+  const DATA_FILE = "cic.txt";
+  let allGrouped = {};
+
+  window.onload = async function () {
+    // Mặc định: đầu tháng → hôm nay
+    const today = new Date();
+    const firstOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+
+    document.getElementById("fromDate").value = formatDateInput(firstOfMonth);
+    document.getElementById("toDate").value = formatDateInput(today);
+
+    await loadData();
+  };
+
+  function formatDateInput(d) {
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return y + "-" + m + "-" + day;
+  }
+
+  async function loadData() {
+    try {
+      const response = await fetch(DATA_FILE);
+      const text = await response.text();
+      const rows = parseCSV(text);
+      allGrouped = groupByTenNguoi(rows);
+      renderTables(allGrouped);
+    } catch (err) {
+      document.getElementById("result").innerHTML =
+        "<b>Không đọc được file cic.txt</b>";
+      console.error(err);
+    }
+  }
+
+  function applyFilter() {
+    renderTables(allGrouped);
+  }
+
+  function resetFilter() {
+    const today = new Date();
+    const firstOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+    document.getElementById("fromDate").value = formatDateInput(firstOfMonth);
+    document.getElementById("toDate").value = formatDateInput(today);
+    renderTables(allGrouped);
+  }
+
+  function getFilterRange() {
+    const from = document.getElementById("fromDate").value;
+    const to = document.getElementById("toDate").value;
+    return {
+      from: from ? new Date(from) : null,
+      to: to ? new Date(to + "T23:59:59") : null
+    };
+  }
+
+  function parseCSV(text) {
+    const lines = text.trim().split("\n");
+    const headers = lines[0].split(",");
+    return lines.slice(1).map(line => {
+      const values = line.split(",");
+      const obj = {};
+      headers.forEach((h, i) => {
+        obj[h.trim()] = (values[i] || "").trim();
+      });
+      return obj;
+    });
+  }
+
+  function groupByTenNguoi(rows) {
+    const map = {};
+    rows.forEach(r => {
+      const ten = r["TenNguoi"];
+      if (!map[ten]) map[ten] = [];
+      map[ten].push(r);
+    });
+    return map;
+  }
+
+  function parseDate(str) {
+    if (!str) return new Date(0);
+    if (str.includes("/")) {
+      const [d, m, y] = str.split("/");
+      return new Date(y + "-" + m + "-" + d);
+    }
+    return new Date(str);
+  }
+
+  function renderTables(grouped) {
+    const container = document.getElementById("result");
+    container.innerHTML = "";
+
+    const { from, to } = getFilterRange();
+    const allNames = Object.keys(grouped);
+
+    const mainTable = document.createElement("table");
+    mainTable.className = "grid-table";
+    const tbody = document.createElement("tbody");
+
+    for (let i = 0; i < allNames.length; i += 4) {
+      const tr = document.createElement("tr");
+
+      for (let j = i; j < i + 4; j++) {
+        const td = document.createElement("td");
+
+        if (j < allNames.length) {
+          const tenNguoi = allNames[j];
+          const rows = grouped[tenNguoi];
+
+          // Tổng luôn tính toàn bộ
+          let tongCong = 0;
+          rows.forEach(r => { tongCong += Number(r.SoTien) || 0; });
+
+          // Lọc theo ngày chỉ cho hiển thị
+          let filteredRows = rows.filter(r => {
+            const d = parseDate(r.Ngay);
+            if (from && d < from) return false;
+            if (to && d > to) return false;
+            return true;
+          });
+
+          // Sort ngày giảm dần
+          filteredRows.sort((a, b) => parseDate(b.Ngay) - parseDate(a.Ngay));
+
+          let html =
+            '<table class="inner-table">' +
+            '<caption>' + tenNguoi + '</caption>' +
+            '<thead><tr><th>STT</th><th>Ngày</th><th>Nội dung</th><th>Số tiền</th><th>Ghi chú</th></tr></thead>' +
+            '<tbody>' +
+            '<tr class="total-row"><td colspan="3">Tổng (tất cả)</td><td>' + tongCong.toLocaleString() + '</td><td></td></tr>';
+
+          if (filteredRows.length === 0) {
+            html += '<tr><td colspan="5" style="text-align:center;color:#999;font-style:italic;">Không có dữ liệu trong khoảng thời gian</td></tr>';
+          } else {
+            filteredRows.forEach((r, index) => {
+              const soTien = Number(r.SoTien) || 0;
+              html +=
+                '<tr>' +
+                '<td>' + (index + 1) + '</td>' +
+                '<td>' + r.Ngay + '</td>' +
+                '<td>' + r.NoiDung + '</td>' +
+                '<td>' + soTien.toLocaleString() + '</td>' +
+                '<td>' + (r.GhiChu || "") + '</td>' +
+                '</tr>';
+            });
+          }
+
+          html += '</tbody></table>';
+          td.innerHTML = html;
+        }
+
+        tr.appendChild(td);
+      }
+
+      tbody.appendChild(tr);
+    }
+
+    mainTable.appendChild(tbody);
+    container.appendChild(mainTable);
+  }
+</script>
+
+</body>
+</html>
