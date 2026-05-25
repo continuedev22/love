@@ -1,0 +1,114 @@
+Ngay,TenNguoi,NoiDung,SoTien,GhiChu
+02/03/2026,My Linh,cafe,20000
+04/03/2026,My Linh,cafe,20000
+05/03/2026,My Linh,cafe,20000
+06/03/2026,My Linh,cafe,20000
+06/03/2026,My Linh,bánh mì,23000
+10/03/2026,My Linh,cafe,20000
+11/03/2026,My Linh,cafe,20000
+13/03/2026,My Linh,bánh mì,23000
+13/03/2026,My Linh,thanh toán (cấn tiền phê la),-122000
+19/03/2026,Ngoc Hiep,bin mời phê la,-170000
+23/03/2026,My Linh,2 ly cafe,40000
+23/03/2026,Ngoc Hiep,cafe,20000
+23/03/2026,Thao Ly,cafe,20000
+25/03/2026,My Linh,bánh mì,23000
+25/03/2026,Ngoc Hiep,cafe,20000
+26/03/2026,My Linh,cafe,20000
+26/03/2026,Ngoc Hiep,cafe,20000
+26/03/2026,Thao Ly,cafe,20000
+27/03/2026,Thao Ly,bánh mì,23000
+27/03/2026,My Linh,cafe + bánh mì,43000
+27/03/2026,Ngoc Hiep,cafe,20000
+28/03/2026,Ngoc Hiep,cafe,20000
+28/03/2026,My Linh,cafe,20000
+31/03/2026,Ngoc Hiep,cafe,20000
+31/03/2026,My Linh,cafe,20000
+01/04/2026,Ngoc Hiep,cafe,20000
+01/04/2026,My Linh,cafe,20000
+01/04/2026,My Linh,thanh toán tiền,-300000
+03/04/2026,My Linh,thiếu chị be 2 ly nước,-30000
+03/04/2026,Thao Ly,thiếu em Ly 1 ly nước,-15000
+03/04/2026,My Linh,bin thiếu bánh mì không + thịt nướng,-38000
+08/04/2026,My Linh,bin thiếu 1 ly nước,-15000
+08/04/2026,My Linh,bin thiếu 1 ly nước,-15000
+08/04/2026,Thao Ly,thiếu em Ly 2gỏi cuốn,-14000
+10/04/2026,My Linh,cafe,20000
+10/04/2026,My Linh,nabati,6000
+10/04/2026,Ngoc Hiep,cafe,20000
+13/04/2026,My Linh,cafe,20000
+13/04/2026,Ngoc Hiep,cafe,20000
+14/04/2026,My Linh,cafe,20000
+14/04/2026,Ngoc Hiep,cafe,20000
+14/04/2026,Thao Ly,nabati,6000
+15/04/2026,My Linh,cafe,20000
+15/04/2026,Ngoc Hiep,cafe,20000
+16/04/2026,My Linh,cafe,10000
+16/04/2026,Ngoc Hiep,cafe,10000
+16/04/2026,My Linh,cầu lông + revive,118000
+16/04/2026,Ngoc Hiep,cầu lông + revive,59000
+16/04/2026,Thao Ly,cầu lông + revive,59000
+16/04/2026,My Linh,bánh mì,-22000
+17/04/2026,My Linh,momo,-30000
+17/04/2026,Ngoc Hiep,momo,-200000
+17/04/2026,Thao Ly,momo,-100000
+20/04/2026,My Linh,cafe,20000
+20/04/2026,Ngoc Hiep,cafe,20000
+20/04/2026,Thao Ly,cafe,20000
+21/04/2026,My Linh,jolibee,70000
+21/04/2026,Thao Ly,jolibee,70000
+21/04/2026,Ngoc Hiep,cafe,20000
+21/04/2026,My Linh,cafe,20000
+22/04/2026,Ngoc Hiep,cafe,20000
+22/04/2026,My Linh,cafe,20000
+24/04/2026,My Linh,cafe,20000
+24/04/2026,Thao Ly,cafe,20000
+24/04/2026,Ngoc Hiep,cafe,20000
+24/04/2026,Thao Ly,bin ăn chả giò,-10000
+24/04/2026,My Linh,cầu lông,108000
+24/04/2026,Thao Ly,cầu lông,36000
+24/04/2026,Ngoc Hiep,cầu lông,36000
+28/04/2026,My Linh,cafe,20000
+28/04/2026,Thao Ly,cafe + nabati,26000
+28/04/2026,Ngoc Hiep,cafe,20000
+28/04/2026,My Linh,bánh mì,-20000
+28/04/2026,My Linh,cầu lông,108000
+28/04/2026,Thao Ly,cầu lông,36000
+28/04/2026,Ngoc Hiep,cầu lông,36000
+29/04/2026,Thao Ly,cafe,20000
+29/04/2026,My Linh,cafe + nabati,26000
+29/04/2026,Ngoc Hiep,cafe,20000
+29/04/2026,My Linh,thanh toán momo,-500000
+29/04/2026,Ngoc Hiep,thanh toán momo,-115000
+29/04/2026,Thao Ly,trả tiền cầu cho em Ly ,-92000
+06/05/2026,Ngoc Hiep,cafe,20000
+08/05/2026,Ngoc Hiep,cafe,20000
+08/05/2026,My Linh,cafe,20000
+08/05/2026,My Linh,bánh mì,20000
+08/05/2026,My Linh,cầu lông,120000
+08/05/2026,Ngoc Hiep,cầu lông,40000
+08/05/2026,Thao Ly,cầu lông,40000
+11/05/2026,Thao Ly,bin ăn cholibee,-68000
+11/05/2026,My Linh,bin ăn bánh bao,-20000
+11/05/2026,Thao Ly,bạc sỉu + sinh tô bơ,45000
+11/05/2026,My Linh,cafe,20000
+11/05/2026,Ngoc Hiep,cafe,20000
+12/05/2026,Thao Ly,cầu lông,-44000
+12/05/2026,My Linh,gỏi cuốn ăn đánh cầu lông,-28000
+14/05/2026,My Linh,cafe,20000
+14/05/2026,Ngoc Hiep,cafe,20000
+14/05/2026,Thao Ly,thanh toán momo,-98000
+15/05/2026,My Linh,cafe,20000
+15/05/2026,Ngoc Hiep,cafe,20000
+15/05/2026,Thao Ly,cafe,20000
+19/05/2026,My Linh,cafe + bánh mì,43000
+19/05/2026,Ngoc Hiep,cafe,20000
+19/05/2026,Thao Ly,cafe,20000
+20/05/2026,My Linh,cafe,20000
+20/05/2026,Ngoc Hiep,cafe,20000
+20/05/2026,Thao Ly,cafe,20000
+21/05/2026,My Linh,cafe,20000
+21/05/2026,Ngoc Hiep,cafe,20000
+21/05/2026,Thao Ly,cafe,20000
+25/05/2026,My Linh,cafe,20000
+25/05/2026,Ngoc Hiep,cafe,20000
