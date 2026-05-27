@@ -112,3 +112,5 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 21/05/2026,Thao Ly,cafe,20000
 25/05/2026,My Linh,cafe,20000
 25/05/2026,Ngoc Hiep,cafe,20000
+26/05/2026,My Linh,cafe,20000
+26/05/2026,Ngoc Hiep,cafe,20000
