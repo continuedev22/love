@@ -118,3 +118,6 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 29/05/2026,My Linh,bánh mì,23000
 29/05/2026,Thao Ly,bánh mì,23000
 29/05/2026,My Linh,cafe,20000
+01/06/2026,My Linh,cafe,20000
+01/06/2026,Thao Ly,2 cafe,40000
+01/06/2026,Ngoc Hiep,cafe,20000
