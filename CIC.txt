@@ -130,3 +130,5 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 08/06/2026,Thao Ly,trừ tiền cầu lông,-27000
 08/06/2026,My Linh,cafe,20000
 08/06/2026,Thao Ly,bánh mì,23000
+09/06/2026,My Linh,cafe,20000
+09/06/2026,Ngoc Hiep,cafe,20000
