@@ -132,3 +132,6 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 08/06/2026,Thao Ly,bánh mì,23000
 09/06/2026,My Linh,cafe,20000
 09/06/2026,Ngoc Hiep,cafe,20000
+10/06/2026,My Linh,cafe,20000
+10/06/2026,Ngoc Hiep,cafe,20000
+10/06/2026,Thao Ly,cafe,20000
