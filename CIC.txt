@@ -140,3 +140,4 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 11/06/2026,Thao Ly,cafe,20000
 12/06/2026,Thao Ly,tiền sn tháng 6,-61000
 12/06/2026,Ngoc Hiep,trả qua momo,-500000
+12/06/2026,Thao Ly,Quỹ tháng 6,-150000
