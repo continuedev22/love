@@ -142,3 +142,6 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 12/06/2026,Ngoc Hiep,trả qua momo,-500000
 12/06/2026,Thao Ly,Quỹ tháng 6,-150000
 12/06/2026,My Linh,trả qua momo,-550000
+16/06/2026,My Linh,cafe,20000
+16/06/2026,Ngoc Hiep,cafe,20000
+16/06/2026,Thao Ly,cafe,20000
