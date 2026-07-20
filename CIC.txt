@@ -165,3 +165,6 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 20/07/2026,My Linh,cafe,20000
 20/07/2026,Ngoc Hiep,ly cafe,20000
 20/07/2026,Thao Ly,cafe + bánh,43000
+16/07/2026,My Linh,cafe,20000
+16/07/2026,Ngoc Hiep,ly cafe,20000
+16/07/2026,Thao Ly,cafe + bánh,43000
