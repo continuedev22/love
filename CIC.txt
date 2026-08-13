@@ -200,3 +200,4 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 11/08/2026,Ngoc Hiep,hủ tíu,30000
 11/08/2026,Thao Ly,hủ tíu,30000
 11/08/2026,My Linh,hủ tíu,30000
+12/08/2026,Ngoc Hiep,cafe,20000
