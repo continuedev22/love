@@ -202,6 +202,6 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 11/08/2026,My Linh,hủ tíu,30000
 12/08/2026,Ngoc Hiep,cafe,20000
 12/08/2026,My Linh,chơi điện tử,-60000
-14/08/2026,My Linh,tiền sinh nhật em Ly,-35000
+14/08/2026,My Linh,tiền sinh nhật em Ly,35000
 14/08/2026,Thao Ly,tiền quỹ tháng 8 (70k vì ăn ốc dư 80k),-70000
 14/08/2026,My Linh,trả qua momo,-300000
