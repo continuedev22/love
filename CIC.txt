@@ -209,3 +209,7 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 18/08/2026,Ngoc Hiep,bánh bao,23000
 18/08/2026,Thao Ly,bánh bao,19000
 18/08/2026,My Linh,2 bánh bao (Huyền),42000
+18/08/2026,Thao Ly,2 revive,-30000
+20/08/2026,My Linh,3 cafe 1 bánh,83000
+20/08/2026,Thao Ly,1 cafe 1 bánh,43000
+20/08/2026,Ngoc Hiep,1 cafe,20000
