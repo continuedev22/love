@@ -216,3 +216,4 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 21/08/2026,Ngoc Hiep,1 cafe,20000
 21/08/2026,Thao Ly,1 cafe,20000
 21/08/2026,My Linh,1 cafe + 1 bánh,43000
+20/08/2026,Thao Ly,bin ăn 1 combo 2 miếng gà,-119000
