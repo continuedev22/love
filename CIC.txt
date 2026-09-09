@@ -220,3 +220,4 @@ Ngay,TenNguoi,NoiDung,SoTien,GhiChu
 26/08/2026,Thao Ly,cafe,20000
 26/08/2026,My Linh,cafe,20000
 26/08/2026,Ngoc Hiep,cafe,20000
+04/09/2026,My Linh,cafe,20000
