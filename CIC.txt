@@ -1,4 +1,10 @@
 Ngay,TenNguoi,NoiDung,SoTien,GhiChu
+27/10/2026,Thao Ly,cafe,20000
+27/10/2026,My Linh,bánh + cafe,43000
+27/10/2026,Ngoc Hiep,bánh + cafe,43000
+26/10/2026,My Linh,cafe,20000
+26/10/2026,Thao Ly,cafe,20000
+23/10/2026,Ngoc Hiep,momo,-200000
 22/10/2026,Thao Ly,cầu lông + 1aqua,-75000
 20/10/2026,My Linh,nabati + cafe,26000
 20/10/2026,Ngoc Hiep,nabati,6000
