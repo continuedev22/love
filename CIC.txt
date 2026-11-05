@@ -1,4 +1,6 @@
 Ngay,TenNguoi,NoiDung,SoTien,GhiChu
+05/11/2026,Ngoc Hiep,cafe + gói jet,40000
+05/11/2026,My Linh,bánh,23000
 02/11/2026,Thao Ly,cafe,20000
 30/10/2026,My Linh,cafe,20000
 28/10/2026,My Linh,trúng số trả nợ qua momo,-400000
