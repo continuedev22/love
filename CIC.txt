@@ -1,5 +1,5 @@
 Ngay,TenNguoi,NoiDung,SoTien,GhiChu
-11/11/2026,Thao Ly,mì quảng ,-36250
+11/11/2026,Thao Ly,mì quảng ,-36500
 11/11/2026,My Linh,cưa đôi phúc long,135000
 11/11/2026,Thao Ly,quỹ tháng 11,-150000
 11/11/2026,Thao Ly,mượn 100k trả PLong,-100000
